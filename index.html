@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZenArch Studios | AI Agents, Apps, Websites & Spatial Architecture</title>
+    <meta name="description" content="ZenArch Studios engineers AI agents, custom mobile & web apps, interactive 3D plot viewers, and AR/VR spatial architecture experiences." />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter & Montserrat Google Fonts (Matches the logo's geometric luxury typeface) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+        theme: {
+        extend: {
+        fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        brand: ['Montserrat', 'sans-serif'],
+        },
+        colors: {
+        zenBlack: '#060607',
+        zenDark: '#0D0E11',
+        zenCard: '#131419',
+        zenBorder: '#23252E',
+        zenGold: '#C9A977',
+        zenGoldLight: '#DFCA9D',
+        zenGoldDim: '#8A734E',
+        }
+        }
+        }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #060607;
+            color: #E5E7EB;
+            overflow-x: hidden;
+        }
+
+        .brand-tracking {
+            letter-spacing: 0.35em;
+        }
+
+        .brand-tracking-wide {
+            letter-spacing: 0.45em;
+        }
+
+        .gold-grid-bg {
+            background-image: radial-gradient(rgba(201, 169, 119, 0.08) 1px, transparent 0);
+            background-size: 36px 36px;
+        }
+
+        .gold-glow {
+            filter: blur(140px);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-zenGold selection:text-black">
+
+    <!-- Ambient Gold Backlight -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[320px] bg-zenGold/10 gold-glow -z-10 pointer-events-none"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-zenBlack/85 border-b border-zenBorder/70 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+
+            <!-- Brand Logo + Wordmark -->
+            <a href="#" class="flex items-center gap-4 group">
+                <!-- Exact Geometric SVG Match of the ZenArch Monogram -->
+                <div class="w-10 h-10 flex items-center justify-center text-zenGold group-hover:text-zenGoldLight transition">
+                    <svg viewBox="0 0 100 100" fill="currentColor" class="w-9 h-9">
+                        <!-- Roof Chevron -->
+                        <polygon points="50,15 95,85 80,85 50,38 20,85 5,85" />
+                        <!-- Keystone Square -->
+                        <rect x="42.5" y="68" width="15" height="15" />
+                    </svg>
+                </div>
+
+                <div class="flex flex-col">
+                    <span class="font-brand font-medium text-lg text-white brand-tracking">ZENARCH</span>
+                    <div class="flex items-center gap-2">
+                        <span class="h-[1px] w-3 bg-zenGold"></span>
+                        <span class="font-brand text-[9px] font-normal text-zenGold brand-tracking-wide uppercase">STUDIOS</span>
+                        <span class="h-[1px] w-3 bg-zenGold"></span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Menu Links -->
+            <div class="hidden md:flex items-center gap-10 text-xs font-brand tracking-widest text-slate-400 uppercase">
+                <a href="#services" class="hover:text-zenGold transition">Services</a>
+                <a href="#architecture" class="hover:text-zenGold transition">Architecture</a>
+                <a href="#contact" class="hover:text-zenGold transition">Inquire</a>
+            </div>
+
+            <!-- Action Button -->
+            <div>
+                <a href="#contact" class="px-6 py-2.5 rounded-none border border-zenGold/60 bg-zenGold/5 text-zenGold hover:bg-zenGold hover:text-black font-brand text-xs uppercase tracking-widest transition-all duration-300">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative gold-grid-bg pt-24 pb-20 md:pt-32 md:pb-28 border-b border-zenBorder/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <!-- Emblem Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 border border-zenGold/30 bg-zenGold/5 text-[11px] text-zenGold tracking-[0.25em] uppercase font-brand mb-10">
+                <span class="w-1.5 h-1.5 bg-zenGold"></span>
+                Digital Architecture & Autonomous AI Workflows
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-brand text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-white max-w-5xl mx-auto leading-[1.15]">
+                We Build High-Performance Apps, Websites, <span class="text-transparent bg-clip-text bg-gradient-to-r from-zenGoldLight via-zenGold to-zenGoldDim font-normal">AI Agents</span> & Spatial Tech.
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-8 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-sans font-light leading-relaxed">
+                ZenArch Studios engineers enterprise digital systems—combining day-to-day workflow automation with immersive interactive 3D architectural visualization.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="#architecture" class="w-full sm:w-auto px-9 py-4 bg-zenGold text-black font-brand font-semibold text-xs uppercase tracking-widest hover:bg-zenGoldLight transition-all">
+                    Explore Spatial Architecture
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-9 py-4 border border-zenBorder bg-zenCard/80 text-slate-300 font-brand text-xs uppercase tracking-widest hover:border-zenGold/60 transition-all">
+                    View Core Services
+                </a>
+            </div>
+
+            <!-- Tech Ribbon -->
+            <div class="mt-20 pt-10 border-t border-zenBorder/40 flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-slate-500 text-[11px] tracking-[0.3em] uppercase font-brand">
+                <span>// AUTONOMOUS AGENTS</span>
+                <span>// AR & VR IMMERSIVE</span>
+                <span>// INTERACTIVE 3D WEB</span>
+                <span>// MOBILE & WEB APPS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. SERVICES TAB (Clean, High-Level Overview) -->
+    <section id="services" class="py-24 border-b border-zenBorder/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl mb-16">
+                <span class="text-zenGold text-xs font-brand uppercase tracking-[0.3em]">// CAPABILITIES</span>
+                <h2 class="font-brand text-3xl sm:text-4xl font-light text-white mt-3">Core Digital Offerings</h2>
+                <p class="text-slate-400 text-sm mt-3 font-sans">Eliminating operational drag with intelligent agents and building responsive platforms built to convert.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Service 1: AI Agents -->
+                <div class="p-8 bg-zenCard border border-zenBorder hover:border-zenGold/50 transition duration-300 group">
+                    <div class="w-12 h-12 border border-zenGold/30 bg-zenGold/5 flex items-center justify-center text-zenGold mb-6 group-hover:border-zenGold transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 class="font-brand text-lg font-medium text-white mb-3 tracking-wide">Autonomous AI Agents</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                        Specialized autonomous agents that automate regular company tasks, manage inbound communications, qualify leads, and synchronize internal systems 24/7 without manual friction.
+                    </p>
+                    <span class="text-[11px] font-brand tracking-widest text-zenGold uppercase">Process Automation →</span>
+                </div>
+
+                <!-- Service 2: Custom Apps -->
+                <div class="p-8 bg-zenCard border border-zenBorder hover:border-zenGold/50 transition duration-300 group">
+                    <div class="w-12 h-12 border border-zenGold/30 bg-zenGold/5 flex items-center justify-center text-zenGold mb-6 group-hover:border-zenGold transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="font-brand text-lg font-medium text-white mb-3 tracking-wide">Custom Mobile & Web Apps</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                        Tailor-made iOS, Android, and internal enterprise applications designed with intuitive user interfaces, secure database architectures, and smooth cross-device performance.
+                    </p>
+                    <span class="text-[11px] font-brand tracking-widest text-zenGold uppercase">Cross-Platform Platforms →</span>
+                </div>
+
+                <!-- Service 3: Modern Websites -->
+                <div class="p-8 bg-zenCard border border-zenBorder hover:border-zenGold/50 transition duration-300 group">
+                    <div class="w-12 h-12 border border-zenGold/30 bg-zenGold/5 flex items-center justify-center text-zenGold mb-6 group-hover:border-zenGold transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="font-brand text-lg font-medium text-white mb-3 tracking-wide">High-Performance Websites</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                        Architecturally styled, ultra-responsive web experiences optimized for lightning-fast load times, SEO visibility, and turning qualified visitors into closed business.
+                    </p>
+                    <span class="text-[11px] font-brand tracking-widest text-zenGold uppercase">Modern Digital Presence →</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ARCHITECTURE PAGE / SECTION -->
+    <section id="architecture" class="py-24 border-b border-zenBorder/60 bg-zenDark/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-zenGold text-xs font-brand uppercase tracking-[0.3em]">// SPATIAL ARCHITECTURE</span>
+                    <h2 class="font-brand text-3xl sm:text-4xl font-light text-white mt-3">Interactive 3D & Spatial Tech</h2>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md font-sans">
+                    Converting static plans, layouts, and developments into interactive, photorealistic 3D and augmented reality environments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Plot Viewer -->
+                <div class="p-8 bg-zenCard border border-zenBorder hover:border-zenGold/50 transition duration-300 group">
+                    <div class="w-12 h-12 border border-zenGold/30 bg-zenGold/5 flex items-center justify-center text-zenGold mb-6 group-hover:border-zenGold transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+                    </div>
+                    <h3 class="font-brand text-lg font-medium text-white mb-3 tracking-wide">Interactive 3D Plot Viewers</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                        Browser-based interactive masterplans. Prospective property buyers can rotate 3D land terrain, filter available plots, inspect exact boundary dimensions, and review orientation.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li>• Masterplan 3D Navigation</li>
+                        <li>• Live Plot Availability Status</li>
+                        <li>• Topography & Boundary Data</li>
+                    </ul>
+                </div>
+
+                <!-- AR & VR Spatial Apps -->
+                <div class="p-8 bg-zenCard border border-zenBorder hover:border-zenGold/50 transition duration-300 group">
+                    <div class="w-12 h-12 border border-zenGold/30 bg-zenGold/5 flex items-center justify-center text-zenGold mb-6 group-hover:border-zenGold transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="font-brand text-lg font-medium text-white mb-3 tracking-wide">AR & VR Spatial Apps</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                        Next-generation immersive apps for Apple Vision Pro, Meta Quest, iOS, and Android. Project structures onto physical plots at 1:1 scale or lead virtual reality tours.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li>• 1:1 Scale On-Site AR Placement</li>
+                        <li>• Virtual Reality Headset Tours</li>
+                        <li>• iPad & Mobile Sales Tools</li>
+                    </ul>
+                </div>
+
+                <!-- Interactive 3D Interiors & Projects -->
+                <div class="p-8 bg-zenCard border border-zenBorder hover:border-zenGold/50 transition duration-300 group">
+                    <div class="w-12 h-12 border border-zenGold/30 bg-zenGold/5 flex items-center justify-center text-zenGold mb-6 group-hover:border-zenGold transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
+                    </div>
+                    <h3 class="font-brand text-lg font-medium text-white mb-3 tracking-wide">Interactive 3D Projects & Interiors</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                        Photorealistic interior and architectural configurations in the browser. Allow buyers to walk through spaces, switch materials, and explore layout variations in real time.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li>• Real-Time Material Customization</li>
+                        <li>• Zero-Download Web Walkthroughs</li>
+                        <li>• Lighting & Day/Night Studies</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation -->
+    <section id="contact" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="p-10 md:p-14 bg-zenCard border border-zenBorder relative">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-zenGold text-xs font-brand uppercase tracking-[0.3em]">// INITIATE</span>
+                    <h2 class="font-brand text-3xl font-light text-white mt-2">Start a Project with ZenArch</h2>
+                    <p class="text-slate-400 text-sm mt-3 font-sans">Let’s engineer your custom AI workflows, application platforms, or interactive architectural systems.</p>
+                </div>
+
+                <form class="space-y-5 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Inquiry received. The ZenArch team will review your specifications.');">
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest font-brand text-slate-400 mb-2">Name</label>
+                        <input type="text" required placeholder="Your Name" class="w-full px-4 py-3 bg-zenBlack border border-zenBorder text-white text-sm focus:outline-none focus:border-zenGold transition font-sans" />
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest font-brand text-slate-400 mb-2">Work Email</label>
+                        <input type="email" required placeholder="name@company.com" class="w-full px-4 py-3 bg-zenBlack border border-zenBorder text-white text-sm focus:outline-none focus:border-zenGold transition font-sans" />
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest font-brand text-slate-400 mb-2">Service Interest</label>
+                        <select class="w-full px-4 py-3 bg-zenBlack border border-zenBorder text-slate-300 text-sm focus:outline-none focus:border-zenGold transition font-sans">
+                            <option>Interactive 3D Plot Viewer</option>
+                            <option>AR / VR Spatial Application</option>
+                            <option>Interactive 3D Project / Interior Walkthrough</option>
+                            <option>Autonomous AI Agents</option>
+                            <option>Custom App Development</option>
+                            <option>Modern Website Development</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest font-brand text-slate-400 mb-2">Project Brief</label>
+                        <textarea rows="3" placeholder="Brief details regarding the scope, property, or operational tasks..." class="w-full px-4 py-3 bg-zenBlack border border-zenBorder text-white text-sm focus:outline-none focus:border-zenGold transition font-sans"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-zenGold text-black font-brand font-semibold text-xs uppercase tracking-widest hover:bg-zenGoldLight transition">
+                        Submit Consultation Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-zenBorder/60 text-center text-xs text-slate-500 font-brand tracking-widest">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <svg viewBox="0 0 100 100" fill="currentColor" class="w-4 h-4 text-zenGold">
+                    <polygon points="50,15 95,85 80,85 50,38 20,85 5,85" />
+                    <rect x="42.5" y="68" width="15" height="15" />
+                </svg>
+                <p>© 2026 ZENARCH STUDIOS. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="flex gap-8 text-[10px]">
+                <a href="#services" class="hover:text-zenGold transition">SERVICES</a>
+                <a href="#architecture" class="hover:text-zenGold transition">ARCHITECTURE</a>
+                <a href="#contact" class="hover:text-zenGold transition">CONTACT</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
